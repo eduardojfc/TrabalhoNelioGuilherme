@@ -10,7 +10,7 @@ namespace NavGame.Managers {
             if (instance == null) {
                 instance = this;
             } else {
-                Destroy (gameObject);
+                Destroy(gameObject);
             }
         }
         public GameObject GetPlayer () {
