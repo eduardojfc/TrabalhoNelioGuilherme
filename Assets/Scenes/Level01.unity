@@ -227,9 +227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a48e5f8e95fa9e4ca93ade8aeac9023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contactRadius: 0.5
   walkableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!195 &238211511
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -776,6 +777,7 @@ GameObject:
   - component: {fileID: 1754263335}
   - component: {fileID: 1754263334}
   - component: {fileID: 1754263333}
+  - component: {fileID: 1754263336}
   m_Layer: 0
   m_Name: Nexus
   m_TagString: Finish
@@ -836,6 +838,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754263336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754263332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499f18fae84f7054f8dcb139e592ff82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactRadius: 1.53
+  currentHealth: 0
+  stats:
+    maxHealth: 100
+    damage: 10
+    armor: 1
+    attackSpeed: 1
 --- !u!1 &1822140000
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,7 +920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   badSpawn:
   - {fileID: 1674494623}
-  badPrefab: {fileID: 0}
+  badPrefab: {fileID: 3615788802885900700, guid: 75fb7799c77845e4190c3f8cd558914b,
+    type: 3}
   badWaves: 3
   waitTimeFirstWave: 2
   waitTimeBetweenWaves: 4

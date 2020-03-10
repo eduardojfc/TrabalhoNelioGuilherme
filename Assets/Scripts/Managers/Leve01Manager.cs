@@ -11,7 +11,7 @@ public class Leve01Manager : MonoBehaviour
     public float waitTimeBetweenWaves = 4f;
     void Start()
     {
-       StartCoroutine(SpawnBad());
+        StartCoroutine(SpawnBad());
     }
 
      IEnumerator SpawnBad()
