@@ -30,7 +30,10 @@ namespace NavGame.Managers
 
         public void Play(string clipName, Vector3 position)
         {
-            AudioSource.PlayClipAtPoint(dict[clipName], position);
+            if (dict.ContainsKey(clipName))
+            {
+                AudioSource.PlayClipAtPoint(dict[clipName], position);       
+            }
         }
 
         [Serializable]
