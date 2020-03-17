@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 3615788802885900699}
   - component: {fileID: 3615788802885900698}
   - component: {fileID: 3615788802885900701}
+  - component: {fileID: 8744255532408044646}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Untagged
@@ -122,6 +123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3615788802968490294}
+  - {fileID: 329778280291553907}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -182,6 +184,21 @@ MonoBehaviour:
     damage: 10
     armor: 1
     attackSpeed: 1
+--- !u!114 &8744255532408044646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615788802885900700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bec3a5915a800149adb4d7ae0ac3ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthUIPrefab: {fileID: 991087237747703058, guid: 6987f933249833b40bf999fe1fe1503c,
+    type: 3}
+  healthPosition: {fileID: 329778280291553907}
 --- !u!1 &3615788802968490185
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3615788802968490185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.07, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.6, y: 2, z: 0.6}
   m_Children:
   - {fileID: 3615788801821303416}
@@ -274,3 +291,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6380030064656209236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329778280291553907}
+  m_Layer: 0
+  m_Name: HealthPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329778280291553907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6380030064656209236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3615788802885900696}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
