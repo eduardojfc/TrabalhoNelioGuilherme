@@ -103,7 +103,8 @@ GameObject:
   - component: {fileID: 3615788802885900699}
   - component: {fileID: 3615788802885900698}
   - component: {fileID: 3615788802885900701}
-  - component: {fileID: 8744255532408044646}
+  - component: {fileID: 114502765895680156}
+  - component: {fileID: 114411158700854476}
   m_Layer: 0
   m_Name: Creep
   m_TagString: Untagged
@@ -178,13 +179,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactRadius: 0.5
-  currentHealth: 0
-  stats:
-    maxHealth: 100
+  ofenseStats:
     damage: 10
-    armor: 1
     attackSpeed: 1
---- !u!114 &8744255532408044646
+--- !u!114 &114502765895680156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615788802885900700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499f18fae84f7054f8dcb139e592ff82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactRadius: 0.5
+  defenseStats:
+    maxHealth: 100
+    armor: 1
+  currentHealth: 0
+--- !u!114 &114411158700854476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
