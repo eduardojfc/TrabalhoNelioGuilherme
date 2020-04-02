@@ -1424,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039959168068467125}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 14.65, y: -0.02, z: 9.6}
+  m_LocalPosition: {x: 10.84, y: -0.02, z: 11.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1039959168120615199}
@@ -1510,6 +1510,7 @@ MonoBehaviour:
     attackSpeed: 1
   enemyLayers:
   - Creep
+  enemiesToAttack: []
 --- !u!135 &1039959168068467127
 SphereCollider:
   m_ObjectHideFlags: 0
