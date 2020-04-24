@@ -7,7 +7,7 @@ using UnityEngine.AI;
 namespace NavGame.Core
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class AttackGameObject : TouchableGameObject
+    public abstract class AttackGameObject : TouchableGameObject
     {
         public OfenseStats ofenseStats;
 
@@ -85,16 +85,12 @@ namespace NavGame.Core
         IEnumerator AttackAfterDelay(DamageableGameObject target, float delay)
         {
             yield return new WaitForSeconds(delay);
-            if (target != null)
+            if (OnAttackCast != null)
             {
                 OnAttackCast(castTransform.position);
             }
-    
-            target.TakeDamage(ofenseStats.damage);
-            if (onAttackStrike != null)
-            {
-                onAttackStrike(target.damageTransform.position);
-            }
+
+            Attack(target);
         }
 
         void DecreaseAttackCooldown()
@@ -142,5 +138,7 @@ namespace NavGame.Core
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
+
+        protected abstract void Attack(DamageableGameObject target);
     }
 }
