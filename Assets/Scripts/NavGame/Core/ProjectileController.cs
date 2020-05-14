@@ -7,10 +7,14 @@ namespace NavGame.Core
     public class ProjectileController : MonoBehaviour
     {
         public float speed = 8f;
+        
+        public OnAttackStrikeEvent onAttackStrike;
 
        
 
         DamageableGameObject target;
+  
+   
 
         void Start()
         {
@@ -31,6 +35,7 @@ namespace NavGame.Core
         public void Init(DamageableGameObject target)
         {
             this.target = target;
+            
         }
     }
 }
