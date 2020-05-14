@@ -11,35 +11,63 @@ public class PlayerController : TouchableGameObject
     Camera cam;
     public LayerMask walkableLayer;
     public LayerMask collectibleLayer;
+    CollectibleGameObject pickupTarget;
 
- 
+
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         cam = Camera.main;
 
-        
+
     }
 
-   
+
+
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))   
+        ProcessInput();
+        UpdateCollect();
+    }
+
+    void ProcessInput()
+    {
+
+        if (Input.GetMouseButtonDown(1))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit, Mathf.Infinity, walkableLayer))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, walkableLayer))
             {
                 agent.SetDestination(hit.point);
             }
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, collectibleLayer))
             {
+                pickupTarget = hit.collider.gameObject.GetComponent<CollectibleGameObject>();
                 Debug.Log("Collectible: " + hit.collider.name);
                 agent.SetDestination(hit.point);
+
+            }
+            else
+            {
+                pickupTarget = null;
+            }
+        }
+    }
+
+    void UpdateCollect()
+    {
+        if (pickupTarget != null)
+        {
+            if (IsInTouch(pickupTarget))
+            {
+                pickupTarget.Pickup();
             }
         }
     }
 }
+
