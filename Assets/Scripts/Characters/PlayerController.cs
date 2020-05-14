@@ -48,7 +48,6 @@ public class PlayerController : TouchableGameObject
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, collectibleLayer))
             {
                 pickupTarget = hit.collider.gameObject.GetComponent<CollectibleGameObject>();
-                Debug.Log("Collectible: " + hit.collider.name);
                 agent.SetDestination(hit.point);
 
             }
