@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110667820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4febddda99069c4c86885d74f90df40, type: 3}
+  m_Script: {fileID: 11500000, guid: 89de6c5b6887def479b53158bae0110e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 6
@@ -1672,7 +1672,7 @@ MonoBehaviour:
     attackSpeed: 1
   attackRange: 6
   attackDelay: 0.5
-  castTransform: {fileID: 502090175}
+  castTransform: {fileID: 0}
   enemyLayers:
   - Creep
   enemiesToAttack: []
