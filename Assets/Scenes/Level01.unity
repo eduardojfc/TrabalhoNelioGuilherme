@@ -3920,6 +3920,10 @@ MonoBehaviour:
   - {fileID: 695519822}
   - {fileID: 401024354}
   - {fileID: 563438975}
+  actionsCost:
+  - {fileID: 589409356}
+  - {fileID: 2131433288}
+  - {fileID: 1930263187}
 --- !u!4 &1887908103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935262449544730161, guid: f5d5f127176decf4f8ddc8226ab2d9e5,
