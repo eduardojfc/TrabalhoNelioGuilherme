@@ -14,6 +14,7 @@ namespace NavGame.Managers
         public static LevelManager instance;
 
         public Action[] actions;
+        public string errorSound;
 
         public OnActionSelectEvent onActionSelect;
         public OnActionCancelEvent onActionCancel;
@@ -41,6 +42,12 @@ namespace NavGame.Managers
 
         public virtual void SelectAction(int actionIndex)
         {
+            if (actions[actionIndex].coolDown > 0)
+            {
+
+                AudioManager.instance.Play(errorSound, PlayerManager.instance.GetPlayer().transform.position);
+                return;
+            }
             CancelAction();
             selectedAction = actionIndex;
             if (onActionSelect != null)
